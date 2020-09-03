@@ -3,7 +3,7 @@
 <p><%= homepageContent %></p>
 <% posts.forEach(function(post){ %>
     <h1><%=post.title%></h1>
-    <%var link = "/posts/"+post.title%>
-    <p><%=post.content.substring(0,100) + "..."%><a href=<%=link%>>Read more</a> </p>
+    <%var link = "/posts/"+post._id%>
+    <p><%=post.content.substring(0,100) + "..."%><a class="readmore" href=<%=link%>> Read more</a> </p>
 <% }); %>
 <%- include('partials/footer.ejs'); -%>
